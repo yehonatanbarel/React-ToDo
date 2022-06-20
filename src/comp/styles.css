@@ -1,0 +1,42 @@
+.single--toDo--div {
+    border: 1px solid black;
+    margin: 10px;
+    border-radius: 5px;
+    /* font-stretch: expanded; */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+
+.input--text {
+    width: 250px;
+}
+
+/* .btn-add {
+    padding-right: 50px;
+}
+
+.btn--clear-all {
+    margin: 50px;
+} */
+
+.span--for--space {
+    margin: 10px;
+}
+
+.btn--div {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+
+}
+
+.input--div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.h1 {
+    text-align: center;
+}
