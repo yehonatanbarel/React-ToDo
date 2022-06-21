@@ -34,21 +34,36 @@ function App() {
     setToDoArr([])
   }
 
+  window.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+      const userInput = toDoInput.current.value
+      if (userInput === '') {
+        return
+      }
+      setToDoArr(prev => [...prev, userInput])
+      toDoInput.current.value = ''
+      console.log(userInput)
+    }
+  });
+
   return (
     <>
-
-      <ToDoList toDoArr={toDoArr} handleX={removeFromList} />
+      <h1 className='h1'>
+        {toDoArr.length > 0 ? `${toDoArr.length} more left` : 'The TO-DO list is empty'}
+      </h1>
+      <div className='input--div'>
+        <input ref={toDoInput} type="text" className="input--text"></input>
+      </div>
       <div className='btn--div'>
         <Button onClick={handleToDoInput} className="btn--add">Add ToDo</Button>
         <span className='span--for--space'></span>
         <Button variant="danger" onClick={clearToDo} className="btn--claer-all">Clear ToDo</Button>
       </div>
-      <div className='input--div'>
-        <input ref={toDoInput} type="text" className="input--text"></input>
-      </div>
-      <h1 className='h1'>
-        {toDoArr.length > 0 ? `${toDoArr.length} more left` : 'The TO-DO list is empty'}
-      </h1>
+
+      <ToDoList toDoArr={toDoArr} handleX={removeFromList} />
+
+
+
 
     </>
 

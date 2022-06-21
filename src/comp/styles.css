@@ -3,6 +3,7 @@
     margin: 10px;
     border-radius: 5px;
     /* font-stretch: expanded; */
+    font-size: 25px;
     display: flex;
     justify-content: space-between;
     padding: 10px;
